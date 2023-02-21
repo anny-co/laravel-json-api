@@ -73,6 +73,44 @@ class Schema extends BaseSchema
     /**
      * @inheritDoc
      */
+    public function hasIdentifierMeta($resource): bool
+    {
+        return !empty($this->getIdentifierMeta($resource));
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getIdentifierMeta($resource)
+    {
+        if(method_exists($this->provider, 'getInclusionMeta')){
+            return $this->provider->getInclusionMeta($resource);
+        }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function hasResourceMeta($resource): bool
+    {
+        return !empty($this->getResourceMeta($resource));
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getResourceMeta($resource)
+    {
+        if(method_exists($this->provider, 'getPrimaryMeta')){
+            return $this->provider->getPrimaryMeta($resource);
+        }
+
+        return null;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getAttributes($resource, ContextInterface $context): iterable
     {
         $this->provider->setContext($context);
