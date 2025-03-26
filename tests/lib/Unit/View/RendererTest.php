@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -122,7 +122,7 @@ class RendererTest extends TestCase
      * @param QueryParameters|null $parameters
      * @return object
      */
-    private function withEncoder($name = null, $options = 0, $depth = 512, QueryParameters $parameters = null)
+    private function withEncoder($name = null, $options = 0, $depth = 512, ?QueryParameters $parameters = null)
     {
         $post = (object) ['type' => 'posts', 'id' => '1'];
 

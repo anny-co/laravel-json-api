@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,7 +79,7 @@ final class RouteRegistration extends IlluminateRegistrar
      * @param string|null $inverse
      * @return $this
      */
-    public function field(string $field, string $inverse = null): self
+    public function field(string $field, ?string $inverse = null): self
     {
         $this->defaults = array_merge($this->defaults, [
             ResourceRegistrar::PARAM_RELATIONSHIP_NAME => $field,

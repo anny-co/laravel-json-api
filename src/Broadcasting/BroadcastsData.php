@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ trait BroadcastsData
      * @param array|null $fieldsets
      * @return array
      */
-    protected function serializeData($data, $includePaths = null, array $fieldsets = null)
+    protected function serializeData($data, $includePaths = null, ?array $fieldsets = null)
     {
         $params = new QueryParameters($includePaths ? (array) $includePaths : null, $fieldsets);
 

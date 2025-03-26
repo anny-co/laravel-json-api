@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -76,12 +76,12 @@ class Page implements PageInterface
      */
     public function __construct(
         $data,
-        LinkInterface $first = null,
-        LinkInterface $previous = null,
-        LinkInterface $next = null,
-        LinkInterface $last = null,
+        ?LinkInterface $first = null,
+        ?LinkInterface $previous = null,
+        ?LinkInterface $next = null,
+        ?LinkInterface $last = null,
         $meta = null,
-        string $metaKey = null
+        ?string $metaKey = null
     ) {
         $this->data = $data;
         $this->first = $first;

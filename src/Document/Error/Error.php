@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -134,12 +134,12 @@ class Error implements Arrayable, \JsonSerializable
     public function __construct(
         $id = null,
         $status = null,
-        string $code = null,
-        string $title = null,
-        string $detail = null,
-        iterable $source = null,
-        iterable $links = null,
-        iterable $meta = null
+        ?string $code = null,
+        ?string $title = null,
+        ?string $detail = null,
+        ?iterable $source = null,
+        ?iterable $links = null,
+        ?iterable $meta = null
     )
     {
         $this->setId($id);

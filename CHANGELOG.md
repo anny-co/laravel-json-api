@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file. This project adheres to
 [Semantic Versioning](http://semver.org/) and [this changelog format](http://keepachangelog.com/).
 
+## Unreleased
+
+## [7.2.0] - 2025-03-21
+
+### Added
+
+- Package now supports Laravel 12.
+
+## [7.1.0] - 2025-01-11
+
+### Changed
+
+- Removed PHP 8.4 deprecation notices.
+
+### Fixed
+
+- [#648](https://github.com/cloudcreativity/laravel-json-api/pull/648) Ensure self link is removed when it is returned
+  as `false`.
+
+## [7.0.0] - 2024-03-14
+
+### Changed
+
+- **BREAKING** Package now requires Laravel 11.
+- Minimum PHP version is now `8.2`.
+
+## [6.1.0] - 2024-02-11
+
+### Fixed
+
+- [#642](https://github.com/cloudcreativity/laravel-json-api/pull/642) Add missing resource meta functionality.
+- [#643](https://github.com/cloudcreativity/laravel-json-api/issues/643) Add missing resource link functionality.
+
 ## [6.0.0] - 2023-02-14
 
 ### Changed
@@ -23,7 +56,7 @@ All notable changes to this project will be documented in this file. This projec
 
 - **BREAKING** Upgraded the `neomerx/json-api` dependency from `v1` to `v5` of our fork
   `laravel-json-api/neomerx-json-api`. Refer to the [Upgrade Guide](./docs/upgrade.md) for details of the required
-  changes.  
+  changes.
 
 ## [4.1.0] - 2023-01-21
 

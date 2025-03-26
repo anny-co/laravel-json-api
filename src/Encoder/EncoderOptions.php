@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ class EncoderOptions
      * @param string|null $urlPrefix
      * @param int $depth
      */
-    public function __construct(int $options = 0, string $urlPrefix = null, int $depth = 512)
+    public function __construct(int $options = 0, ?string $urlPrefix = null, int $depth = 512)
     {
         $this->options   = $options;
         $this->depth     = $depth;

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -83,7 +83,7 @@ class ClientDispatch extends PendingDispatch
      * @param string|null $id
      * @return ClientDispatch
      */
-    public function setResource(string $type, string $id = null): ClientDispatch
+    public function setResource(string $type, ?string $id = null): ClientDispatch
     {
         $this->resourceType = $type;
         $this->resourceId = $id;

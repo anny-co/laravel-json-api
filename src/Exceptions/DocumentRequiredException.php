@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ class DocumentRequiredException extends InvalidJsonException
      *
      * @param Exception|null $previous
      */
-    public function __construct(Exception $previous = null)
+    public function __construct(?Exception $previous = null)
     {
         parent::__construct(
             null,

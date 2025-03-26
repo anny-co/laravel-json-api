@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 
 namespace CloudCreativity\LaravelJsonApi\Exceptions;
 
+use Exception;
 use Illuminate\Support\Collection;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -50,12 +51,12 @@ class ClientException extends \RuntimeException
      *
      * @param RequestInterface $request
      * @param ResponseInterface|null $response
-     * @param \Exception|null $previous
+     * @param Exception|null $previous
      */
     public function __construct(
         RequestInterface $request,
-        ResponseInterface $response = null,
-        \Exception $previous = null
+        ?ResponseInterface $response = null,
+        ?Exception $previous = null
     ) {
         parent::__construct(
             $previous ? $previous->getMessage() : 'Client encountered an error.',
@@ -104,7 +105,7 @@ class ClientException extends \RuntimeException
 
         try {
             $this->errors = $this->parse();
-        } catch (\Exception $ex) {
+        } catch (Exception $ex) {
             $this->errors = [];
         }
 

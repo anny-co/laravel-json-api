@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ final class RelationshipsRegistration implements Arrayable
      * @param string|null $inverse
      * @return RelationshipRegistration
      */
-    public function hasOne(string $field, string $inverse = null): RelationshipRegistration
+    public function hasOne(string $field, ?string $inverse = null): RelationshipRegistration
     {
         $rel = $this->hasOne[$field] ?? new RelationshipRegistration();
 
@@ -71,7 +71,7 @@ final class RelationshipsRegistration implements Arrayable
      * @param string|null $inverse
      * @return RelationshipRegistration
      */
-    public function hasMany(string $field, string $inverse = null): RelationshipRegistration
+    public function hasMany(string $field, ?string $inverse = null): RelationshipRegistration
     {
         $rel = $this->hasMany[$field] ?? new RelationshipRegistration();
 

@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -115,7 +115,7 @@ class JsonApiService
      * @param Closure|null $routes
      * @return ApiRegistration
      */
-    public function register($apiName, $options = [], Closure $routes = null): ApiRegistration
+    public function register($apiName, $options = [], ?Closure $routes = null): ApiRegistration
     {
         /** @var JsonApiRegistrar $registrar */
         $registrar = app('json-api.registrar');

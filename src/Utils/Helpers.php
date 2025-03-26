@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -162,7 +162,7 @@ class Helpers
      * @see https://jsonapi.org/format/#errors
      * @deprecated 3.0.0 use `Document\Error\Errors::getStatus()`
      */
-    public static function httpErrorStatus($errors, int $default = null): int
+    public static function httpErrorStatus($errors, ?int $default = null): int
     {
         if (\is_null($default)) {
             $default = SymfonyResponse::HTTP_BAD_REQUEST;

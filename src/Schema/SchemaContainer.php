@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ class SchemaContainer implements SchemaContainerInterface
      * @param FactoryInterface $factory
      * @param SchemaFields|null $fields
      */
-    public function __construct(ContainerInterface $container, FactoryInterface $factory, SchemaFields $fields = null)
+    public function __construct(ContainerInterface $container, FactoryInterface $factory, ?SchemaFields $fields = null)
     {
         $this->container = $container;
         $this->factory = $factory;

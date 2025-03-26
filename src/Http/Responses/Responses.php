@@ -1,6 +1,6 @@
 <?php
 /*
- * Copyright 2023 Cloud Creativity Limited
+ * Copyright 2024 Cloud Creativity Limited
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -262,7 +262,7 @@ class Responses extends BaseResponses
     public function getContentResponseBackwardsCompat(
         $data,
         int $statusCode = self::HTTP_OK,
-        array $links = null,
+        ?array $links = null,
         $meta = null,
         array $headers = []
     ): Response
@@ -423,7 +423,7 @@ class Responses extends BaseResponses
     public function getIdentifiersResponseBackwardsCompat(
         $data,
         int $statusCode = self::HTTP_OK,
-        array $links = null,
+        ?array $links = null,
         $meta = null,
         array $headers = []
     ): Response {
@@ -444,7 +444,7 @@ class Responses extends BaseResponses
      * @param array $headers
      * @return Response
      */
-    public function error($error, int $defaultStatusCode = null, array $headers = []): Response
+    public function error($error, ?int $defaultStatusCode = null, array $headers = []): Response
     {
         if (!$error instanceof ErrorInterface) {
             $error = $this->factory->createDocumentMapper()->createError(
@@ -468,7 +468,7 @@ class Responses extends BaseResponses
      *
      * @return Response
      */
-    public function errors(iterable $errors, int $defaultStatusCode = null, array $headers = []): Response
+    public function errors(iterable $errors, ?int $defaultStatusCode = null, array $headers = []): Response
     {
         $errors = $this->factory->createDocumentMapper()->createErrors($errors);
         $statusCode = Helpers::httpErrorStatus($errors, $defaultStatusCode);
